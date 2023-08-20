@@ -1,0 +1,4 @@
+<app-label icon="sun" text="Sunrise">{{this.sunrise * 1000 | date:'shortTime' }}</app-label>
+<app-label icon="sunset" text="Sunset">{{this.sunset * 1000 | date:'shortTime' }}</app-label>
+<app-label icon="up" text="High">{{ this.high | temperatureConverter:'C'}}&deg; C</app-label>
+<app-label icon="down" text="Low">{{ this.low | temperatureConverter:'C'}}&deg; C</app-label>

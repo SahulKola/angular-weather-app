@@ -1,0 +1,19 @@
+<section class="loc-details">
+    <h1 class="temp">{{ temp | temperatureConverter: 'C' }}&deg;C</h1>
+    <p class="location">{{ city}}</p>
+    <div class="co-ords">
+        <app-label icon="long" [text]="long"></app-label>
+        <app-label icon="lat" [text]="lat"></app-label>
+    </div>
+    <span class="country">
+        <span class="icon">
+            <img src="assets/svg/loc.svg" alt="Location">
+        </span>
+        <p class="text">{{country}}</p>
+    </span>
+</section>
+
+<section>
+    <p class="text">{{ dateTime * 1000 | date:'EEEE'}}</p>
+    <p class="text">{{ dateTime * 1000 | date:'dd MMMM YYYY' }}</p>
+</section>

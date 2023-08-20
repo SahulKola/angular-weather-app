@@ -1,0 +1,10 @@
+<div class="icon">
+    <img [src]="img" alt="Cloud">
+</div>
+<p class="weather">{{main}}</p>
+<p class="desc">{{desc}}</p>
+<div class="metrics">
+    <app-label icon="humidity" [text]="humidity"></app-label>
+    <app-label icon="wind" [text]="wind"></app-label>
+    <app-label icon="pressure" [text]="pressure"></app-label>
+</div>
