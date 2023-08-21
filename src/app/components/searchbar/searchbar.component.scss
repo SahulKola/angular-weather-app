@@ -4,10 +4,7 @@
   width: 100%;
   height: 28px;
   margin: 0 auto;
-  form {
-    width: 100%;
-    height: 100%;
-  }
+
   input {
     position: relative;
     border: none;
@@ -36,6 +33,19 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  :host {
+    width: 100%;
+    max-width: unset;
+    margin-bottom: 0 0 10px 0;
+    height: 40px;
+    input {
+      height: 40px;
+      font-size: 22px;
     }
   }
 }
