@@ -1,5 +1,10 @@
 :host {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
+  min-height: 100vh;
 }
 .container {
   display: flex;
@@ -7,6 +12,7 @@
   justify-content: space-between;
   align-items: stretch;
   max-width: 600px;
+  width: 100%;
   gap: 20px;
   margin: 0 auto;
   padding: 40px;
@@ -28,10 +34,12 @@
 
 @media only screen and (max-width: 599px) {
   :host {
-    height: 100%;
+    display: block;
   }
   .container {
     border-radius: 0;
+    background: none;
+    box-shadow: none;
   }
   .main-wrap {
     grid-template-columns: 1fr;

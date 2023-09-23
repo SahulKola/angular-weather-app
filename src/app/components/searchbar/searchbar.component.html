@@ -1,12 +1,15 @@
-<form #Searchform="ngForm" (ngSubmit)="onSubmit()">
+<form #Searchform="ngForm" (ngSubmit)="onSubmit(Searchform)">
     <div class="form-section">
         <input #searchText="ngModel" type="text" name="SearchText" placeholder="Enter city name" autocomplete="off"
-            [(ngModel)]="text" required pattern="^[A-Za-z]+$" autofocus>
+            [(ngModel)]="text" required pattern="^[A-Za-z0-9 ]*$" minlength="3" autofocus>
         <div class="icon">
             <img src="assets/svg/search.svg" alt="Search Icon">
         </div>
     </div>
-
-    <p *ngIf="searchText.errors && searchText.touched " class="error">Invalid Input
-        (Please enter alphabets only)</p>
+    <p *ngIf="(searchText.errors?.['required']) && searchText.dirty && searchText.touched " class="error">Search field
+        required</p>
+    <p *ngIf="(searchText.errors?.['pattern']) && searchText.dirty && searchText.touched " class="error">Special
+        characters are not allowed</p>
+    <p *ngIf="(searchText.errors?.['minlength']) && searchText.dirty && searchText.touched " class="error">Search field
+        must contain at least {{ searchText.errors!['minlength'].requiredLength }} characters</p>
 </form>

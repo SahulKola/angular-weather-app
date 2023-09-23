@@ -1,6 +1,6 @@
 :host {
   position: relative;
-  max-width: 50%;
+  max-width: 60%;
   width: 100%;
   margin: 0 auto;
 
@@ -40,7 +40,8 @@
   }
   .error {
     font-size: 14px;
-    color: #ff0000;
+    margin-top: 5px;
+    color: #f44336;
   }
 }
 
